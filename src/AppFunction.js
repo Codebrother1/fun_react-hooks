@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const AppFunction = () => {
-  // const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
+  
+  const incrementCount = () => {
+    setCount(count + 1)
+  }
   return (
-    <div>
-      AppFunction
-    </div>
+    <button onClick={incrementCount}>
+      I was clicked {count} times with useState
+    </button>
   )
 }
 
