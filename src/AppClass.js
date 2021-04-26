@@ -6,14 +6,27 @@ class AppClass extends Component {
   }
 
 incrementCount = () => {
-  this.setState({
-    count: this.state.count + 1
-  })
+  this.setState(prevState => ({
+    count: prevState.count + 1
+  }));
 }
 
   render() {
     return (
-      <button onClick={this.incrementCount}> I was clicked {this.state.count} times</button>
+      <>
+      <h2>Counter</h2>
+      <button onClick={this.incrementCount}> 
+      I was clicked {this.state.count} times
+      </button>
+      <h2>Toogle Light</h2>
+      <div style={{
+        height: "50px",
+        width: "50px",
+        background: "grey",
+      }}>
+
+      </div>
+      </>
     )
   }
 }

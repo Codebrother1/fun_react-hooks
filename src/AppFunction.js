@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 
 const AppFunction = () => {
   const [count, setCount] = useState(0);
-  
+
   const incrementCount = () => {
-    setCount(count + 1)
+    setCount(prevCount => prevCount + 1)
   }
   return (
     <button onClick={incrementCount}>

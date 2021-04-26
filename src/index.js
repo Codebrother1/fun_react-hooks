@@ -7,6 +7,7 @@ import AppFunction from './AppFunction';
 ReactDOM.render(
   <React.StrictMode>
     <AppClass />
+  
     <AppFunction/>
   </React.StrictMode>,
   document.getElementById('root')
